@@ -5,6 +5,7 @@ import random
 import numpy as np
 import pickle
 import torchvision.transforms as transforms
+from data.base_dataset import BaseDataset
 
 from .celeba import CelebADataset
 
