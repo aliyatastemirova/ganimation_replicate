@@ -23,10 +23,7 @@ class DataLoader:
     def create_datase(self):
         # specify which dataset to load here
         loaded_dataset = os.path.basename(self.opt.data_root.strip('/')).lower()
-        if 'celeba' in loaded_dataset or 'emotion' in loaded_dataset:
-            dataset = CelebADataset()
-        else:
-            dataset = BaseDataset()
+        dataset = CelebADataset()
         dataset.initialize(self.opt)
         return dataset
 
